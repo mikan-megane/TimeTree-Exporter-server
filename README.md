@@ -78,7 +78,9 @@ Then, you can import the ics file to your calendar app.
 
 ## Limitations
 
-Alarms(Alerts) can't be imported to Google Calendar through iCal format due to Google's bug.
+- Alarms (alerts) can't be imported to Google Calendar through iCal format due to Google's bug.
+- TimeTree labels include both a category name and a color. When using `--split-by-label`, each category is saved as a separate ICS file.
+- Label color information is preserved in the ICS output, but Google Calendar does not apply those event colors when importing ICS files. If you rely on colors to organize events, you may need to check historical color information in TimeTree.
 
 ## Development
 
