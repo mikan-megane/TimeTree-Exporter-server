@@ -43,7 +43,6 @@ class ICalEventFormatter:
 
     @staticmethod
     def _is_valid_hex_color(color: str) -> bool:
-        logger.debug(f"Validating color: {color}")
         """Validate hex color format."""
         if not isinstance(color, str):
             return False
