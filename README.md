@@ -110,6 +110,10 @@ Then, you can import the ics file to your calendar app.
 - Label color information is preserved in the ICS output, but Google Calendar does not apply those event colors when importing ICS files. If you rely on colors to organize events, you may need to check historical color information in TimeTree.
 - TimeTree event notes are exported as the iCalendar `DESCRIPTION`. Private event comments are only exported when `--include-comments` is used.
 
+## Development
+
+For development setup and contribution details, see [DEVELOPMENT.md](DEVELOPMENT.md).
+
 ## Support
 
 If you think it's helpful, kindly support me!
