@@ -4,7 +4,6 @@ This module contains the User class, which is responsible for handling user-rela
 
 import logging
 import uuid
-from typing import Union
 
 import requests
 
@@ -13,7 +12,7 @@ from timetree_exporter.api.const import API_BASEURI, API_USER_AGENT
 logger = logging.getLogger(__name__)
 
 
-def _extract_error_code(response: requests.Response) -> Union[int, None]:
+def _extract_error_code(response: requests.Response) -> int | None:
     """Extract API error code from a login response body."""
     try:
         body = response.json()
@@ -25,7 +24,7 @@ def _extract_error_code(response: requests.Response) -> Union[int, None]:
     return error.get("code") if isinstance(error, dict) else None
 
 
-def login(email, password) -> Union[str, None]:
+def login(email, password) -> str | None:
     """
     Log in to the TimeTree app and return the session ID.
     """
